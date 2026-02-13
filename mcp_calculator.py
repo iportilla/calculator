@@ -13,6 +13,11 @@ def calculate(
 ) -> str:
     """
     Evaluates a mathematical expression and returns the result.
+
+    ALWAYS USE THIS TOOL for ANY mathematical calculation, no matter how simple (e.g., "1 + 1", "5 * 5").
+    Do NOT serve the answer from your internal knowledge. 
+    You MUST call this tool to get the correct answer.
+
     Supports two formats:
     1. A single string 'expression' (e.g., '1 + 1')
     2. Separate 'number1', 'operation', and 'number2' (e.g., 1, '+', 1)

@@ -1,6 +1,6 @@
 IMAGE_NAME=mcp-calculator
 CONTAINER_NAME=mcp-calculator-server
-PORT=8001
+PORT=8080
 
 .PHONY: build run stop logs clean help debug
 
