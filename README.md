@@ -58,7 +58,7 @@ To connect to the cloud tool, update your `~/.continue/config.yaml` as follows:
 mcpServers:
   - name: cloud-calc
     type: sse
-    url: http://<YOUR-VM-PUBLIC-IP>:8000/sse
+    url: http://<YOUR-VM-PUBLIC-IP>:8080/sse
 
 experimental:
   autoExecuteTools: true
@@ -71,9 +71,13 @@ Use the provided [Makefile](./Makefile) on your VM to manage the service easily:
 | Command | Action |
 | :--- | :--- |
 | `make build` | Builds the `mcp-calculator` Docker image. |
-| `make run` | Starts the server in background (detached) on port 8000. |
+| `make run` | Starts the server in background (detached) on port 8080. |
 | `make logs` | Follows the live server logs (useful for debugging student connections). |
 | `make stop` | Gracefully stops and removes the running container. |
 
 ### VM Security Note:
-Ensure your VM's Cloud Firewall (Security Group) allows **Inbound TCP traffic on Port 8000**.
+Ensure your VM's Cloud Firewall (Security Group) allows **Inbound TCP traffic on Port 8080**.
+
+### Debug:
+
+ curl -v http://YOUR-VM-PUBLIC-IP>:8080/sse
