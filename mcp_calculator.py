@@ -33,5 +33,10 @@ def calculate(
     except Exception as e:
         return f"Error: {str(e)}"
 
+import sys
+
 if __name__ == "__main__":
-    mcp.run()
+    if len(sys.argv) > 1 and sys.argv[1] == "sse":
+        mcp.run(transport="sse")
+    else:
+        mcp.run()
