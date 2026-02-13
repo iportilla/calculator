@@ -1,6 +1,7 @@
 IMAGE_NAME=mcp-calculator
 CONTAINER_NAME=mcp-calculator-server
-PORT=8000
+PORT=8001
+
 
 .PHONY: build run stop logs clean help
 
@@ -16,7 +17,7 @@ build:
 	docker build -t $(IMAGE_NAME) .
 
 run:
-	docker run -d --name $(CONTAINER_NAME) -p $(PORT):$(PORT) --rm $(IMAGE_NAME)
+	docker run -d --name $(CONTAINER_NAME) -p $(PORT):8000 --rm $(IMAGE_NAME)
 
 stop:
 	docker stop $(CONTAINER_NAME) || true
