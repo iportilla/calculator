@@ -25,7 +25,7 @@ graph TB
         NB[01_math_agent.ipynb]
     end
 
-    VSCode -- "HTTP-SSE / Port 8000" --> Uvicorn
+    VSCode -- "HTTP-SSE / Port 8080" --> Uvicorn
     NB -- "Standard Logic" --> OpenAI[OpenAI / API]
 ```
 
