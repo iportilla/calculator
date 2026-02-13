@@ -1,8 +1,8 @@
 from mcp.server.fastmcp import FastMCP
 from typing import Optional
 
-# Initialize FastMCP server
-mcp = FastMCP("Calculator")
+# Initialize FastMCP server with host and port
+mcp = FastMCP("Calculator", host="0.0.0.0", port=8000)
 
 @mcp.tool()
 def calculate(
@@ -37,6 +37,6 @@ import sys
 
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "sse":
-        mcp.run(transport="sse", host="0.0.0.0", port=8000)
+        mcp.run(transport="sse")
     else:
         mcp.run()
