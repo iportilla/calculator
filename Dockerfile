@@ -15,4 +15,5 @@ COPY mcp_calculator.py .
 EXPOSE 8000
 
 # Set the entry point to run as SSE by default for cloud usage
-CMD ["python", "mcp_calculator.py", "sse"]
+ENTRYPOINT ["python", "mcp_calculator.py"]
+CMD ["sse"]
