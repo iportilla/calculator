@@ -1,3 +1,31 @@
+### Agents
+
+
+
+```mermaid
+flowchart LR
+    A[User input]
+    B[Agent LLM]
+    C[Memory]
+    D[Reasoning]
+    E[Thought]
+    F[Action]
+    G[Response]
+
+    A --> B
+    B --> D
+    D --> E
+    E -->|Use memory| C
+    C --> D
+    E -->|Call tool or search| F
+    F --> D
+    D --> G
+```
+
+
+
+
+
 ### Calculator Agent (cloud hosted)
 
 
